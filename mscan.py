@@ -34,6 +34,8 @@ def run_popen(command):
 
 
 def reads(data):
+	if not os.path.exists(data):
+		return []
 	with open(data, 'r', encoding='utf-8') as f:
 		# 将处理好的每一行组成一个列表返回
 		text = f.readlines()
@@ -53,6 +55,16 @@ def times():
 
 def amass():
 	run_popen('bin/./amass enum -passive -df domain.txt -config config/amass.ini -o data/amass/domain.txt')
+	domains = set()
+	for line in reads('domain.txt'):
+		if line.strip():
+			domains.add(line.strip())
+	for line in reads('data/amass/domain.txt'):
+		if line.strip():
+			domains.add(line.strip())
+	with open('data/amass/domain.txt', 'w', encoding='utf-8') as f:
+		for d in domains:
+			f.write(d + '\n')
 
 
 def httpx():
