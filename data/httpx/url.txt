@@ -1,1 +1,1 @@
-https://buy.microgg.cn
+http://192.168.99.68:4280

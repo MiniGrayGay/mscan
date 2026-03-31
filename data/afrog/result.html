@@ -140,4 +140,58 @@
 	</head>
 	<body>
 	<div class="top">&nbsp;&nbsp;afrog-Report&nbsp;&nbsp;&nbsp;<a href="https://github.com/zan8in/afrog#%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E" target="_blank" style="font-size:12px;color:darkorange"><i>Disclaimer</i></a>&nbsp;&nbsp;&nbsp;<span style="font-size:12px;font-weight:normal;color:darkgrey">2026-03-31</span></div>
-			
+			<table class="tablefinger">
+	<thead onclick="$(this).next('tbody').toggle()" style="background:#DDE2DE">
+	<td class="vuln">000&nbsp;&nbsp;Fingerprint</td>
+	<td class="security info">INFO</td>
+	<td class="url">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+	</thead><tbody><tr class="fingerprint"><td ><a href="http://192.168.99.68:4280" class='fingerhref' target="_blank">http://192.168.99.68:4280</a>&nbsp;&nbsp;<span class='info'>[200]</span></td><td colspan=2><span class='low' style="font-weight:normal">Login :: Damn Vulnerable Web Application (DVWA)</span>&nbsp;&nbsp;<span class='critical'>dvwa</span></td></tr></tbody></table><table>
+	<thead onclick="$(this).next('tbody').toggle()" style="background:#DDE2DE">
+		<td class="vuln">001&nbsp;&nbsp;git-leak</td>
+		<td class="security critical">CRITICAL</td>
+		<td class="url">http://192.168.99.68:4280</td>
+	</thead><tbody><tr>
+			<td colspan="3"><b>name:</b> Git 代码托管泄漏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>author:</b> zan8in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>security:</b> critical</td>
+		</tr><tr>
+		<td colspan="3"  style="border-top:1px solid #60786F"><a href="http://192.168.99.68:4280/.git/config" target="_blank">http://192.168.99.68:4280/.git/config</a></td>
+	</tr><tr>
+			<td colspan="3" style="background: #223B46; color: #DDE2DE;">
+				<div class="clr">
+				<div class="request w50">
+				<div class="toggleR" onclick="$(this).parent().next('.response').toggle();if($(this).text()=='→'){$(this).text('←');$(this).css('background','red');$(this).parent().removeClass('w50').addClass('w100')}else{$(this).text('→');$(this).css('background','black');$(this).parent().removeClass('w100').addClass('w50')}">→</div>
+<xmp>GET http://192.168.99.68:4280/.git/config HTTP/1.1
+User-Agent: Mozilla/5.0 (compatible, MSIE 9.0, Windows NT 6.1, Trident/5.0)
+Host: 192.168.99.68:4280
+Content-Length: 0
+
+
+</xmp>
+				</div>
+				<div class="response w50">
+				<div class="toggleL" onclick="$(this).parent().prev('.request').toggle();if($(this).text()=='←'){$(this).text('→');$(this).css('background','red');$(this).parent().removeClass('w50').addClass('w100')}else{$(this).text('←');$(this).css('background','black');$(this).parent().removeClass('w100').addClass('w50')}">←</div>
+<xmp>HTTP/1.1 200 OK
+Server: Apache/2.4.66 (Debian)
+Date: Tue, 31 Mar 2026 08:13:31 GMT
+Content-Type: text/plain; charset=utf-8
+Content-Length: 258
+Last-Modified: Tue, 31 Mar 2026 01:16:06 GMT
+ETag: "102-64e47b62cd67c"
+Accept-Ranges: bytes
+
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com:digininja/DVWA.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+</xmp>
+				</div>
+			</div>
+			</td>
+		</tr>
+	</tbody></table>
