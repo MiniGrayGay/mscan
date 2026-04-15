@@ -1,1 +1,353 @@
-{"commandline":"bin/./ffuf -t 200 -w web/fuzz/dict/content-dirsearch-0.9w.txt -ac -o data/fuzz/data.json -u http://192.168.99.68:4280/FUZZ","time":"2026-03-31T19:15:05+11:00","results":[{"input":{"FUZZ":".gitattributes"},"position":152,"status":200,"length":474,"words":47,"lines":32,"content-type":"","redirectlocation":"","duration":343893,"resultfile":"","url":"http://192.168.99.68:4280/.gitattributes","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/refs/remotes/origin"},"position":146,"status":301,"length":380,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/refs/remotes/origin/","duration":463974,"resultfile":"","url":"http://192.168.99.68:4280/.git/refs/remotes/origin","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/refs/remotes"},"position":145,"status":301,"length":373,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/refs/remotes/","duration":6583037,"resultfile":"","url":"http://192.168.99.68:4280/.git/refs/remotes","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git"},"position":117,"status":301,"length":360,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/","duration":24637,"resultfile":"","url":"http://192.168.99.68:4280/.git","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/config"},"position":122,"status":200,"length":258,"words":19,"lines":12,"content-type":"","redirectlocation":"","duration":6557447,"resultfile":"","url":"http://192.168.99.68:4280/.git/config","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/description"},"position":124,"status":200,"length":73,"words":10,"lines":2,"content-type":"","redirectlocation":"","duration":47291,"resultfile":"","url":"http://192.168.99.68:4280/.git/description","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/info/exclude"},"position":130,"status":200,"length":240,"words":38,"lines":7,"content-type":"","redirectlocation":"","duration":33374,"resultfile":"","url":"http://192.168.99.68:4280/.git/info/exclude","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/logs/refs/remotes/origin"},"position":137,"status":301,"length":385,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/logs/refs/remotes/origin/","duration":30960,"resultfile":"","url":"http://192.168.99.68:4280/.git/logs/refs/remotes/origin","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/refs/heads/master"},"position":144,"status":200,"length":41,"words":1,"lines":2,"content-type":"","redirectlocation":"","duration":68252,"resultfile":"","url":"http://192.168.99.68:4280/.git/refs/heads/master","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/logs/HEAD"},"position":132,"status":200,"length":165,"words":8,"lines":2,"content-type":"","redirectlocation":"","duration":42772,"resultfile":"","url":"http://192.168.99.68:4280/.git/logs/HEAD","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/refs/tags"},"position":149,"status":301,"length":370,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/refs/tags/","duration":2483048592,"resultfile":"","url":"http://192.168.99.68:4280/.git/refs/tags","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/refs/remotes/origin/HEAD"},"position":147,"status":200,"length":32,"words":2,"lines":2,"content-type":"","redirectlocation":"","duration":3485505492,"resultfile":"","url":"http://192.168.99.68:4280/.git/refs/remotes/origin/HEAD","host":"192.168.99.68:4280"},{"input":{"FUZZ":"CHANGELOG.md"},"position":2078,"status":200,"length":7134,"words":901,"lines":163,"content-type":"text/markdown","redirectlocation":"","duration":1011920,"resultfile":"","url":"http://192.168.99.68:4280/CHANGELOG.md","host":"192.168.99.68:4280"},{"input":{"FUZZ":"config"},"position":2224,"status":301,"length":362,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/config/","duration":123688,"resultfile":"","url":"http://192.168.99.68:4280/config","host":"192.168.99.68:4280"},{"input":{"FUZZ":"database"},"position":2437,"status":301,"length":364,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/database/","duration":55737,"resultfile":"","url":"http://192.168.99.68:4280/database","host":"192.168.99.68:4280"},{"input":{"FUZZ":"Dockerfile"},"position":2573,"status":200,"length":1014,"words":88,"lines":26,"content-type":"","redirectlocation":"","duration":88971,"resultfile":"","url":"http://192.168.99.68:4280/Dockerfile","host":"192.168.99.68:4280"},{"input":{"FUZZ":"docs"},"position":2574,"status":301,"length":360,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/docs/","duration":583063,"resultfile":"","url":"http://192.168.99.68:4280/docs","host":"192.168.99.68:4280"},{"input":{"FUZZ":"favicon.ico"},"position":2802,"status":200,"length":1406,"words":5,"lines":2,"content-type":"image/vnd.microsoft.icon","redirectlocation":"","duration":93089,"resultfile":"","url":"http://192.168.99.68:4280/favicon.ico","host":"192.168.99.68:4280"},{"input":{"FUZZ":"index.php/login/"},"position":3223,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":975540,"resultfile":"","url":"http://192.168.99.68:4280/index.php/login/","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/logs/refs"},"position":133,"status":301,"length":370,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/logs/refs/","duration":4517179104,"resultfile":"","url":"http://192.168.99.68:4280/.git/logs/refs","host":"192.168.99.68:4280"},{"input":{"FUZZ":"index.php"},"position":3218,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":1020406,"resultfile":"","url":"http://192.168.99.68:4280/index.php","host":"192.168.99.68:4280"},{"input":{"FUZZ":"login.php"},"position":3552,"status":200,"length":1342,"words":77,"lines":75,"content-type":"text/html;charset=utf-8","redirectlocation":"","duration":2205019,"resultfile":"","url":"http://192.168.99.68:4280/login.php","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/logs/refs/heads/master"},"position":135,"status":200,"length":165,"words":8,"lines":2,"content-type":"","redirectlocation":"","duration":4525592158,"resultfile":"","url":"http://192.168.99.68:4280/.git/logs/refs/heads/master","host":"192.168.99.68:4280"},{"input":{"FUZZ":"phpinfo.php"},"position":4182,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":448725,"resultfile":"","url":"http://192.168.99.68:4280/phpinfo.php","host":"192.168.99.68:4280"},{"input":{"FUZZ":"php.ini"},"position":4158,"status":200,"length":154,"words":19,"lines":6,"content-type":"","redirectlocation":"","duration":871239,"resultfile":"","url":"http://192.168.99.68:4280/php.ini","host":"192.168.99.68:4280"},{"input":{"FUZZ":"robots.txt"},"position":4595,"status":200,"length":25,"words":3,"lines":2,"content-type":"text/plain","redirectlocation":"","duration":172472,"resultfile":"","url":"http://192.168.99.68:4280/robots.txt","host":"192.168.99.68:4280"},{"input":{"FUZZ":"README.md"},"position":4532,"status":200,"length":33147,"words":4686,"lines":776,"content-type":"text/markdown","redirectlocation":"","duration":952686,"resultfile":"","url":"http://192.168.99.68:4280/README.md","host":"192.168.99.68:4280"},{"input":{"FUZZ":"security.txt"},"position":4685,"status":200,"length":151,"words":25,"lines":2,"content-type":"text/plain","redirectlocation":"","duration":470126,"resultfile":"","url":"http://192.168.99.68:4280/security.txt","host":"192.168.99.68:4280"},{"input":{"FUZZ":".gitignore"},"position":154,"status":200,"length":293,"words":28,"lines":19,"content-type":"","redirectlocation":"","duration":4533409875,"resultfile":"","url":"http://192.168.99.68:4280/.gitignore","host":"192.168.99.68:4280"},{"input":{"FUZZ":"tests"},"position":5235,"status":301,"length":361,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/tests/","duration":179787,"resultfile":"","url":"http://192.168.99.68:4280/tests","host":"192.168.99.68:4280"},{"input":{"FUZZ":"/.git"},"position":5741,"status":301,"length":360,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/","duration":134288,"resultfile":"","url":"http://192.168.99.68:4280//.git","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/logs/refs/remotes/origin/HEAD"},"position":138,"status":200,"length":165,"words":8,"lines":2,"content-type":"","redirectlocation":"","duration":4544752252,"resultfile":"","url":"http://192.168.99.68:4280/.git/logs/refs/remotes/origin/HEAD","host":"192.168.99.68:4280"},{"input":{"FUZZ":"/index.php?redirect=%2F%2Fevil.com"},"position":6065,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":1333981,"resultfile":"","url":"http://192.168.99.68:4280//index.php?redirect=%2F%2Fevil.com","host":"192.168.99.68:4280"},{"input":{"FUZZ":"/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E\u0026r=students%2Fguardians%2Fcreate"},"position":6064,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":1411310,"resultfile":"","url":"http://192.168.99.68:4280//index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E\u0026r=students%2Fguardians%2Fcreate","host":"192.168.99.68:4280"},{"input":{"FUZZ":"/index.php?appservlang=%3Csvg%2Fonload%3Dconfirm%28%27xss%27%29%3E"},"position":6063,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":1311157,"resultfile":"","url":"http://192.168.99.68:4280//index.php?appservlang=%3Csvg%2Fonload%3Dconfirm%28%27xss%27%29%3E","host":"192.168.99.68:4280"},{"input":{"FUZZ":"/index.php/admin/"},"position":6062,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":1373557,"resultfile":"","url":"http://192.168.99.68:4280//index.php/admin/","host":"192.168.99.68:4280"},{"input":{"FUZZ":"/phpinfo.php"},"position":6165,"status":302,"length":0,"words":1,"lines":1,"content-type":"text/html; charset=UTF-8","redirectlocation":"login.php","duration":447172,"resultfile":"","url":"http://192.168.99.68:4280//phpinfo.php","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/HEAD"},"position":126,"status":200,"length":23,"words":2,"lines":2,"content-type":"","redirectlocation":"","duration":4550943484,"resultfile":"","url":"http://192.168.99.68:4280/.git/HEAD","host":"192.168.99.68:4280"},{"input":{"FUZZ":"/security.txt"},"position":6286,"status":200,"length":151,"words":25,"lines":2,"content-type":"text/plain","redirectlocation":"","duration":900145,"resultfile":"","url":"http://192.168.99.68:4280//security.txt","host":"192.168.99.68:4280"},{"input":{"FUZZ":".dockerignore"},"position":6623,"status":200,"length":80,"words":1,"lines":7,"content-type":"","redirectlocation":"","duration":147023,"resultfile":"","url":"http://192.168.99.68:4280/.dockerignore","host":"192.168.99.68:4280"},{"input":{"FUZZ":"setup.php"},"position":4769,"status":200,"length":4690,"words":404,"lines":136,"content-type":"text/html;charset=utf-8","redirectlocation":"","duration":29283915,"resultfile":"","url":"http://192.168.99.68:4280/setup.php","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/index"},"position":128,"status":200,"length":27578,"words":630,"lines":123,"content-type":"","redirectlocation":"","duration":4560353639,"resultfile":"","url":"http://192.168.99.68:4280/.git/index","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/logs/refs/remotes"},"position":136,"status":301,"length":378,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/logs/refs/remotes/","duration":4568827931,"resultfile":"","url":"http://192.168.99.68:4280/.git/logs/refs/remotes","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/logs/refs/heads"},"position":134,"status":301,"length":376,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/logs/refs/heads/","duration":4567504299,"resultfile":"","url":"http://192.168.99.68:4280/.git/logs/refs/heads","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/packed-refs"},"position":141,"status":200,"length":837,"words":20,"lines":16,"content-type":"","redirectlocation":"","duration":4568470452,"resultfile":"","url":"http://192.168.99.68:4280/.git/packed-refs","host":"192.168.99.68:4280"},{"input":{"FUZZ":".git/refs/heads"},"position":143,"status":301,"length":371,"words":21,"lines":10,"content-type":"text/html; charset=iso-8859-1","redirectlocation":"http://192.168.99.68:4280/.git/refs/heads/","duration":4575086081,"resultfile":"","url":"http://192.168.99.68:4280/.git/refs/heads","host":"192.168.99.68:4280"}],"config":{"autocalibration":true,"autocalibration_keyword":"FUZZ","autocalibration_perhost":false,"autocalibration_strategy":"basic","autocalibration_strings":[],"colors":false,"cmdline":"bin/./ffuf -t 200 -w web/fuzz/dict/content-dirsearch-0.9w.txt -ac -o data/fuzz/data.json -u http://192.168.99.68:4280/FUZZ","configfile":"","postdata":"","delay":{"value":"0.00"},"dirsearch_compatibility":false,"extensions":[],"fmode":"or","follow_redirects":false,"headers":{},"ignorebody":false,"ignore_wordlist_comments":false,"inputmode":"clusterbomb","cmd_inputnum":100,"inputproviders":[{"name":"wordlist","keyword":"FUZZ","value":"web/fuzz/dict/content-dirsearch-0.9w.txt","template":""}],"inputshell":"","json":false,"matchers":{"IsCalibrated":true,"Mutex":{},"Matchers":{"status":{"value":"200,204,301,302,307,401,403,405,500"}},"Filters":{"size":{"value":"320"}},"PerDomainFilters":{}},"mmode":"or","maxtime":0,"maxtime_job":0,"method":"GET","noninteractive":false,"outputdirectory":"","outputfile":"data/fuzz/data.json","outputformat":"json","OutputSkipEmptyFile":false,"proxyurl":"","quiet":false,"rate":0,"recursion":false,"recursion_depth":0,"recursion_strategy":"default","replayproxyurl":"","sni":"","stop_403":false,"stop_all":false,"stop_errors":false,"threads":200,"timeout":10,"url":"http://192.168.99.68:4280/FUZZ","verbose":false,"http2":false}}
+[
+  {
+    "commandline": "/root/PTA/mscan/bin/ffuf -t 200 -w /root/PTA/mscan/web/fuzz/dict/content-dirsearch-0.9w.txt -ac -of json -o /root/PTA/mscan/data/fuzz/single.json -u http://127.0.0.1:4280/FUZZ",
+    "time": "2026-04-09T13:59:19+10:00",
+    "results": [
+      {
+        "input": {
+          "FUZZ": "config"
+        },
+        "position": 2224,
+        "status": 301,
+        "length": 347,
+        "words": 21,
+        "lines": 10,
+        "content-type": "text/html; charset=iso-8859-1",
+        "redirectlocation": "http://127.0.0.1/config/",
+        "duration": 5249732,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/config",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "database"
+        },
+        "position": 2437,
+        "status": 301,
+        "length": 349,
+        "words": 21,
+        "lines": 10,
+        "content-type": "text/html; charset=iso-8859-1",
+        "redirectlocation": "http://127.0.0.1/database/",
+        "duration": 4616471,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/database",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "favicon.ico"
+        },
+        "position": 2802,
+        "status": 200,
+        "length": 1406,
+        "words": 5,
+        "lines": 2,
+        "content-type": "image/vnd.microsoft.icon",
+        "redirectlocation": "",
+        "duration": 1922897,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/favicon.ico",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "index.php"
+        },
+        "position": 3218,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 4172424,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/index.php",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "index.php/login/"
+        },
+        "position": 3223,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 6244339,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/index.php/login/",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "login.php"
+        },
+        "position": 3552,
+        "status": 200,
+        "length": 1342,
+        "words": 77,
+        "lines": 75,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 6697693,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/login.php",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "php.ini"
+        },
+        "position": 4158,
+        "status": 200,
+        "length": 154,
+        "words": 19,
+        "lines": 6,
+        "content-type": "",
+        "redirectlocation": "",
+        "duration": 3141758,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/php.ini",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "phpinfo.php"
+        },
+        "position": 4182,
+        "status": 200,
+        "length": 88445,
+        "words": 4372,
+        "lines": 1001,
+        "content-type": "text/html; charset=UTF-8",
+        "redirectlocation": "",
+        "duration": 4179589,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/phpinfo.php",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "robots.txt"
+        },
+        "position": 4595,
+        "status": 200,
+        "length": 25,
+        "words": 3,
+        "lines": 2,
+        "content-type": "text/plain",
+        "redirectlocation": "",
+        "duration": 4117268,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/robots.txt",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "security.txt"
+        },
+        "position": 4685,
+        "status": 200,
+        "length": 151,
+        "words": 25,
+        "lines": 2,
+        "content-type": "text/plain",
+        "redirectlocation": "",
+        "duration": 4430282,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/security.txt",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "setup.php"
+        },
+        "position": 4769,
+        "status": 200,
+        "length": 6215,
+        "words": 476,
+        "lines": 157,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 24993057,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280/setup.php",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/index.php?redirect=%2F%2Fevil.com"
+        },
+        "position": 6065,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 4888866,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//index.php?redirect=%2F%2Fevil.com",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate"
+        },
+        "position": 6064,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 4910979,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/index.php?appservlang=%3Csvg%2Fonload%3Dconfirm%28%27xss%27%29%3E"
+        },
+        "position": 6063,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 5184536,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//index.php?appservlang=%3Csvg%2Fonload%3Dconfirm%28%27xss%27%29%3E",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/index.php/admin/"
+        },
+        "position": 6062,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 5135631,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//index.php/admin/",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/security.txt"
+        },
+        "position": 6286,
+        "status": 200,
+        "length": 151,
+        "words": 25,
+        "lines": 2,
+        "content-type": "text/plain",
+        "redirectlocation": "",
+        "duration": 3742967,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//security.txt",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/phpinfo.php"
+        },
+        "position": 6165,
+        "status": 200,
+        "length": 88448,
+        "words": 4372,
+        "lines": 1001,
+        "content-type": "text/html; charset=UTF-8",
+        "redirectlocation": "",
+        "duration": 9238451,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//phpinfo.php",
+        "host": "127.0.0.1:4280"
+      }
+    ],
+    "config": {
+      "autocalibration": true,
+      "autocalibration_keyword": "FUZZ",
+      "autocalibration_perhost": false,
+      "autocalibration_strategy": "basic",
+      "autocalibration_strings": [],
+      "colors": false,
+      "cmdline": "/root/PTA/mscan/bin/ffuf -t 200 -w /root/PTA/mscan/web/fuzz/dict/content-dirsearch-0.9w.txt -ac -of json -o /root/PTA/mscan/data/fuzz/single.json -u http://127.0.0.1:4280/FUZZ",
+      "configfile": "",
+      "postdata": "",
+      "delay": {
+        "value": "0.00"
+      },
+      "dirsearch_compatibility": false,
+      "extensions": [],
+      "fmode": "or",
+      "follow_redirects": false,
+      "headers": {},
+      "ignorebody": false,
+      "ignore_wordlist_comments": false,
+      "inputmode": "clusterbomb",
+      "cmd_inputnum": 100,
+      "inputproviders": [
+        {
+          "name": "wordlist",
+          "keyword": "FUZZ",
+          "value": "/root/PTA/mscan/web/fuzz/dict/content-dirsearch-0.9w.txt",
+          "template": ""
+        }
+      ],
+      "inputshell": "",
+      "json": false,
+      "matchers": {
+        "IsCalibrated": true,
+        "Mutex": {},
+        "Matchers": {
+          "status": {
+            "value": "200,204,301,302,307,401,403,405,500"
+          }
+        },
+        "Filters": {
+          "size": {
+            "value": "314"
+          }
+        },
+        "PerDomainFilters": {}
+      },
+      "mmode": "or",
+      "maxtime": 0,
+      "maxtime_job": 0,
+      "method": "GET",
+      "noninteractive": false,
+      "outputdirectory": "",
+      "outputfile": "/root/PTA/mscan/data/fuzz/single.json",
+      "outputformat": "json",
+      "OutputSkipEmptyFile": false,
+      "proxyurl": "",
+      "quiet": false,
+      "rate": 0,
+      "recursion": false,
+      "recursion_depth": 0,
+      "recursion_strategy": "default",
+      "replayproxyurl": "",
+      "sni": "",
+      "stop_403": false,
+      "stop_all": false,
+      "stop_errors": false,
+      "threads": 200,
+      "timeout": 10,
+      "url": "http://127.0.0.1:4280/FUZZ",
+      "verbose": false,
+      "http2": false
+    }
+  }
+]

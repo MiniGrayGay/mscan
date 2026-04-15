@@ -22,6 +22,11 @@ vim domain.txt
 python3 mscan.py  (默认使用全部模块)
 ```
 
+扫描结果会按模块分别落在 `data/` 目录下。
+
+- 汇总报告：`reports/latest.md` 和 `reports/latest.json`
+- XRAY 结果：`data/xray/<时间戳>.html` 和 `data/xray/<时间戳>.json`
+
 # 架构图
 
 ![image-20220811223546040](https://raw.githubusercontent.com/mscandev/mscan/master/image/mscan.png)
