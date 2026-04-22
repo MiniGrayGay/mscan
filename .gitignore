@@ -166,7 +166,36 @@ cython_debug/
 .DS_Store
 
 # MScan Project specifics
-FIX_LOG.md
-# 如果您不想提交测试或实际扫描产生的记录资产，可以选用下方配置
-# data/*/*
-# domain.txt
+
+# Runtime input/target files (generated per-run)
+domain.txt
+data/input/*
+data/amass/*
+data/dnsx/*
+data/httpx/*
+data/nuclei/*
+data/afrog/*
+data/fuzz/*
+data/txport/*
+data/urls/*
+data/dig/*
+data/saucerframe/*
+data/ipcdn/*
+data/xray/*
+data/masscan/*
+data/POC-bomber/*
+
+# Scan reports (timestamped output)
+reports/
+!reports/.gitkeep
+
+# Xray SQLite state
+lib/xray_*/xray.sqlite
+
+# Nuclei templates (large, auto-updated at runtime)
+lib/nuclei-templates/
+
+# Tool binaries (OS-specific, downloaded separately)
+bin/
+lib/libpcap.so*
+task7.md

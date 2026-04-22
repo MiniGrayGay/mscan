@@ -1,0 +1,41 @@
+id: mscan-sqli
+
+info:
+  name: DVWA-microservices 跨服务 SQL 注入 (gateway -> user-api -> vuln-sqli -> db)
+  author: pta
+  severity: critical
+  description: |
+    针对 DVWA-microservices 靶场的跨服务 SQL 注入检测规则。
+
+    数据流链路:
+      client -> gateway(nginx:4280) -> user-api(BFF) -> vuln-sqli -> db(MariaDB)
+
+    `user-api` 中的 user_api_validate_input() 为 no-op, 故用户输入会原样穿过
+    BFF 到达下游 vuln-sqli 的 SQL sink。该规则在 low 安全等级下通过经典的
+    `' OR '1'='1` 载荷触发全表返回, 匹配多条 First name / Surname 作为
+    阳性证据。
+  tags: dvwa,sqli,cross-service,microservice,bff
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/vulnerabilities/sqli/?id=1%27%20OR%20%271%27%3D%271&Submit=Submit"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: word
+        part: body
+        words:
+          - "First name: admin"
+          - "First name: Gordon"
+          - "First name: Pablo"
+        condition: and
+
+      - type: word
+        part: body
+        words:
+          - "Surname:"

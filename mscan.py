@@ -941,7 +941,8 @@ def nuclei():
     command = (
         f"{quote(BIN_DIR / 'nuclei')} -silent -disable-update-check "
         f"-t {quote(BASE_DIR / 'web' / 'nuclei-templates' / 'cves')},"
-        f"{quote(BASE_DIR / 'web' / 'nuclei-templates' / 'cnvd')} "
+        f"{quote(BASE_DIR / 'web' / 'nuclei-templates' / 'cnvd')},"
+        f"{quote(BASE_DIR / 'web' / 'nuclei-templates' / 'mscan-custom-rules')} "
         f"-severity medium,high,critical -retries 1 -rl 150 "
         f"-list {quote(target_file)} "
         f"-o {quote(output_file)}"

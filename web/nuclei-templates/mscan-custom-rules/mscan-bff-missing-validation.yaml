@@ -1,0 +1,35 @@
+id: mscan-bff-missing-validation
+
+info:
+  name: DVWA-microservices BFF 缺少输入校验 (user-api 透传 sink 回显)
+  author: pta
+  severity: high
+  description: |
+    任务 6.2 的跨服务校验规则。
+
+    目标: 检测 user-api (BFF) 是否真的履行了 `user_api_validate_input()` 的职责。
+    做法: 发一个刻意制造的畸形载荷, 观察下游服务的 sink 是否产生专属错误。
+      - 单引号 ' 送给 /vulnerabilities/sqli/?id= 应当在 BFF 被拒绝
+      - 若最终仍能观察到 MariaDB 层的 SQL 语法错误原文回显, 说明:
+          1. BFF 未做 sanitize (即 user_api_validate_input 为 no-op)
+          2. 数据流穿透 gateway -> user-api -> vuln-sqli -> db
+          3. 错误信息又穿回 client, 形成完整 cross-service 漏洞链
+
+    这不是判定 SQLi 是否存在 (有专门的 dvwa-ms-sqli 规则), 而是判定
+    "服务间调用的参数没有经过安全处理" 这一架构级缺陷。
+  tags: dvwa,microservice,bff,input-validation,cross-service,architecture
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/vulnerabilities/sqli/?id=1%27&Submit=Submit"
+
+    matchers-condition: or
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "mysqli_sql_exception"
+          - "You have an error in your SQL syntax"
+          - "MariaDB server version"
+        condition: or

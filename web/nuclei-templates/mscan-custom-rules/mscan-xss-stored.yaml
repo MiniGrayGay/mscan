@@ -1,0 +1,40 @@
+id: mscan-xss-stored
+
+info:
+  name: DVWA-microservices 跨服务存储型 XSS (user-api -> vuln-xss-s)
+  author: pta
+  severity: high
+  description: |
+    链路: client -> gateway -> user-api(BFF) -> vuln-xss-s -> db -> 回显
+
+    两步验证:
+      1) POST 提交含唯一标记的 `<script>` 载荷到留言板
+      2) GET 留言板首页, 检测上一步载荷是否作为原始 HTML 被再次渲染
+
+    利用标记字符串保证不会把其他无关回显误判为本规则触发。
+  tags: dvwa,xss,stored,cross-service,microservice,bff
+
+requests:
+  - raw:
+      - |
+        POST /vulnerabilities/xss_s/ HTTP/1.1
+        Host: {{Hostname}}
+        Content-Type: application/x-www-form-urlencoded
+
+        txtName=mscan&mtxMessage=%3Cscript%3Ealert(%22mscan-ms-xss-stored%22)%3C%2Fscript%3E&btnSign=Sign+Guestbook
+      - |
+        GET /vulnerabilities/xss_s/ HTTP/1.1
+        Host: {{Hostname}}
+
+    req-condition: true
+    matchers-condition: and
+    matchers:
+      - type: status
+        part: header_2
+        status:
+          - 200
+
+      - type: word
+        part: body_2
+        words:
+          - "<script>alert(\"mscan-ms-xss-stored\")</script>"

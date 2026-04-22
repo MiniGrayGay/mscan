@@ -1,0 +1,29 @@
+id: mscan-open-redirect
+
+info:
+  name: DVWA-microservices 开放重定向 (vuln-open-redirect)
+  author: pta
+  severity: medium
+  description: |
+    vuln-open-redirect 的 low 级实现直接 `header("Location: ".$_GET['redirect'])`,
+    任意外部 URL 会被放行。命中规则条件: 302 + Location 指向可控外部域。
+  tags: dvwa,open-redirect,microservice
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/vulnerabilities/open_redirect/source/low.php?redirect=http://mscan-dvwa-redirect.example.com/"
+    redirects: false
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 301
+          - 302
+          - 307
+
+      - type: word
+        part: header
+        words:
+          - "Location: http://mscan-dvwa-redirect.example.com"

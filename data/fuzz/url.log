@@ -9,9 +9,9 @@ phpinfo.php [+] http://127.0.0.1:4280/phpinfo.php
 robots.txt [+] http://127.0.0.1:4280/robots.txt
 security.txt [+] http://127.0.0.1:4280/security.txt
 setup.php [+] http://127.0.0.1:4280/setup.php
-/index.php?redirect=%2F%2Fevil.com [+] http://127.0.0.1:4280/index.php?redirect=%2F%2Fevil.com
-/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate [+] http://127.0.0.1:4280/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate
 /index.php?appservlang=%3Csvg%2Fonload%3Dconfirm%28%27xss%27%29%3E [+] http://127.0.0.1:4280/index.php?appservlang=%3Csvg%2Fonload%3Dconfirm%28%27xss%27%29%3E
+/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate [+] http://127.0.0.1:4280/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate
+/index.php?redirect=%2F%2Fevil.com [+] http://127.0.0.1:4280/index.php?redirect=%2F%2Fevil.com
 /index.php/admin/ [+] http://127.0.0.1:4280/index.php/admin/
-/security.txt [+] http://127.0.0.1:4280/security.txt
 /phpinfo.php [+] http://127.0.0.1:4280/phpinfo.php
+/security.txt [+] http://127.0.0.1:4280/security.txt

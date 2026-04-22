@@ -1,7 +1,7 @@
 [
   {
     "commandline": "/root/PTA/mscan/bin/ffuf -t 200 -w /root/PTA/mscan/web/fuzz/dict/content-dirsearch-0.9w.txt -ac -of json -o /root/PTA/mscan/data/fuzz/single.json -u http://127.0.0.1:4280/FUZZ",
-    "time": "2026-04-09T13:59:19+10:00",
+    "time": "2026-04-16T18:02:10+10:00",
     "results": [
       {
         "input": {
@@ -14,7 +14,7 @@
         "lines": 10,
         "content-type": "text/html; charset=iso-8859-1",
         "redirectlocation": "http://127.0.0.1/config/",
-        "duration": 5249732,
+        "duration": 4929271,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/config",
         "host": "127.0.0.1:4280"
@@ -30,7 +30,7 @@
         "lines": 10,
         "content-type": "text/html; charset=iso-8859-1",
         "redirectlocation": "http://127.0.0.1/database/",
-        "duration": 4616471,
+        "duration": 4809169,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/database",
         "host": "127.0.0.1:4280"
@@ -46,7 +46,7 @@
         "lines": 2,
         "content-type": "image/vnd.microsoft.icon",
         "redirectlocation": "",
-        "duration": 1922897,
+        "duration": 5649920,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/favicon.ico",
         "host": "127.0.0.1:4280"
@@ -62,7 +62,7 @@
         "lines": 118,
         "content-type": "text/html;charset=utf-8",
         "redirectlocation": "",
-        "duration": 4172424,
+        "duration": 4737069,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/index.php",
         "host": "127.0.0.1:4280"
@@ -78,7 +78,7 @@
         "lines": 118,
         "content-type": "text/html;charset=utf-8",
         "redirectlocation": "",
-        "duration": 6244339,
+        "duration": 6539564,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/index.php/login/",
         "host": "127.0.0.1:4280"
@@ -94,7 +94,7 @@
         "lines": 75,
         "content-type": "text/html;charset=utf-8",
         "redirectlocation": "",
-        "duration": 6697693,
+        "duration": 7697897,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/login.php",
         "host": "127.0.0.1:4280"
@@ -110,7 +110,7 @@
         "lines": 6,
         "content-type": "",
         "redirectlocation": "",
-        "duration": 3141758,
+        "duration": 5492767,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/php.ini",
         "host": "127.0.0.1:4280"
@@ -122,11 +122,11 @@
         "position": 4182,
         "status": 200,
         "length": 88445,
-        "words": 4372,
+        "words": 4373,
         "lines": 1001,
         "content-type": "text/html; charset=UTF-8",
         "redirectlocation": "",
-        "duration": 4179589,
+        "duration": 6133431,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/phpinfo.php",
         "host": "127.0.0.1:4280"
@@ -142,7 +142,7 @@
         "lines": 2,
         "content-type": "text/plain",
         "redirectlocation": "",
-        "duration": 4117268,
+        "duration": 3971505,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/robots.txt",
         "host": "127.0.0.1:4280"
@@ -158,7 +158,7 @@
         "lines": 2,
         "content-type": "text/plain",
         "redirectlocation": "",
-        "duration": 4430282,
+        "duration": 6172417,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/security.txt",
         "host": "127.0.0.1:4280"
@@ -174,41 +174,9 @@
         "lines": 157,
         "content-type": "text/html;charset=utf-8",
         "redirectlocation": "",
-        "duration": 24993057,
+        "duration": 26699108,
         "resultfile": "",
         "url": "http://127.0.0.1:4280/setup.php",
-        "host": "127.0.0.1:4280"
-      },
-      {
-        "input": {
-          "FUZZ": "/index.php?redirect=%2F%2Fevil.com"
-        },
-        "position": 6065,
-        "status": 200,
-        "length": 6357,
-        "words": 637,
-        "lines": 118,
-        "content-type": "text/html;charset=utf-8",
-        "redirectlocation": "",
-        "duration": 4888866,
-        "resultfile": "",
-        "url": "http://127.0.0.1:4280//index.php?redirect=%2F%2Fevil.com",
-        "host": "127.0.0.1:4280"
-      },
-      {
-        "input": {
-          "FUZZ": "/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate"
-        },
-        "position": 6064,
-        "status": 200,
-        "length": 6357,
-        "words": 637,
-        "lines": 118,
-        "content-type": "text/html;charset=utf-8",
-        "redirectlocation": "",
-        "duration": 4910979,
-        "resultfile": "",
-        "url": "http://127.0.0.1:4280//index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate",
         "host": "127.0.0.1:4280"
       },
       {
@@ -222,9 +190,41 @@
         "lines": 118,
         "content-type": "text/html;charset=utf-8",
         "redirectlocation": "",
-        "duration": 5184536,
+        "duration": 5592969,
         "resultfile": "",
         "url": "http://127.0.0.1:4280//index.php?appservlang=%3Csvg%2Fonload%3Dconfirm%28%27xss%27%29%3E",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate"
+        },
+        "position": 6064,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 5012491,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//index.php?id=1%22%3E%3Cscript%3Ealert%28document.domain%29%3C%2Fscript%3E&r=students%2Fguardians%2Fcreate",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/index.php?redirect=%2F%2Fevil.com"
+        },
+        "position": 6065,
+        "status": 200,
+        "length": 6357,
+        "words": 637,
+        "lines": 118,
+        "content-type": "text/html;charset=utf-8",
+        "redirectlocation": "",
+        "duration": 5157070,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//index.php?redirect=%2F%2Fevil.com",
         "host": "127.0.0.1:4280"
       },
       {
@@ -238,9 +238,25 @@
         "lines": 118,
         "content-type": "text/html;charset=utf-8",
         "redirectlocation": "",
-        "duration": 5135631,
+        "duration": 5393996,
         "resultfile": "",
         "url": "http://127.0.0.1:4280//index.php/admin/",
+        "host": "127.0.0.1:4280"
+      },
+      {
+        "input": {
+          "FUZZ": "/phpinfo.php"
+        },
+        "position": 6165,
+        "status": 200,
+        "length": 88448,
+        "words": 4373,
+        "lines": 1001,
+        "content-type": "text/html; charset=UTF-8",
+        "redirectlocation": "",
+        "duration": 7495437,
+        "resultfile": "",
+        "url": "http://127.0.0.1:4280//phpinfo.php",
         "host": "127.0.0.1:4280"
       },
       {
@@ -254,25 +270,9 @@
         "lines": 2,
         "content-type": "text/plain",
         "redirectlocation": "",
-        "duration": 3742967,
+        "duration": 4555680,
         "resultfile": "",
         "url": "http://127.0.0.1:4280//security.txt",
-        "host": "127.0.0.1:4280"
-      },
-      {
-        "input": {
-          "FUZZ": "/phpinfo.php"
-        },
-        "position": 6165,
-        "status": 200,
-        "length": 88448,
-        "words": 4372,
-        "lines": 1001,
-        "content-type": "text/html; charset=UTF-8",
-        "redirectlocation": "",
-        "duration": 9238451,
-        "resultfile": "",
-        "url": "http://127.0.0.1:4280//phpinfo.php",
         "host": "127.0.0.1:4280"
       }
     ],
